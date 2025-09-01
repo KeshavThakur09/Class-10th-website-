@@ -11,9 +11,25 @@
     nav a { color: white; padding: 14px 20px; text-decoration: none; }
     nav a:hover { background: #1abc9c; }
     .container { padding: 20px; }
-    .subject-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
-    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center; cursor: pointer; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    .subject-list { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+      gap: 15px; 
+      margin-top: 20px; 
+    }
+    .card { 
+      background: white; 
+      padding: 20px; 
+      border-radius: 10px; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+      text-align: center; 
+      cursor: pointer; 
+      transition: 0.3s;
+    }
+    .card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+    }
   </style>
 </head>
 <body>
@@ -23,13 +39,15 @@
     <p>Detailed Notes • MCQs • Sample Papers</p>
   </header>
 
+  <!-- Top Navigation -->
   <nav>
     <a href="history.html">History</a>
-    <a href="civics.html">Civics</a>
     <a href="geography.html">Geography</a>
     <a href="economics.html">Economics</a>
-    <a href="science.html">Science</a>
-    <a href="maths.html">Maths</a>
+    <a href="civics.html">Civics</a>
+    <a href="physics.html">Physics</a>
+    <a href="chemistry.html">Chemistry</a>
+    <a href="biology.html">Biology</a>
     <a href="english.html">English</a>
     <a href="hindi.html">Hindi</a>
   </nav>
@@ -37,15 +55,35 @@
   <div class="container">
     <h2>Welcome to Class 10 Study Website</h2>
     <p>Select your subject below to view detailed notes:</p>
+
     <div class="subject-list">
-      <div class="card" onclick="window.location.href='history.html'"><h3>History</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='civics.html'"><h3>Civics</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='geography.html'"><h3>Geography</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='economics.html'"><h3>Economics</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='science.html'"><h3>Science</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='maths.html'"><h3>Maths</h3><p>All Chapters</p></div>
-      <div class="card" onclick="window.location.href='english.html'"><h3>English</h3><p>Literature + Grammar</p></div>
-      <div class="card" onclick="window.location.href='hindi.html'"><h3>Hindi</h3><p>कविता + गद्यांश</p></div>
+      <div class="card" onclick="window.location.href='history.html'">
+        <h3>History</h3><p>All Chapters</p>
+      </div>
+      <div class="card" onclick="window.location.href='geography.html'">
+        <h3>Geography</h3><p>All Chapters</p>
+      </div>
+      <div class="card" onclick="window.location.href='economics.html'">
+        <h3>Economics</h3><p>All Chapters</p>
+      </div>
+      <div class="card" onclick="window.location.href='civics.html'">
+        <h3>Civics</h3><p>All Chapters</p>
+      </div>
+      <div class="card" onclick="window.location.href='physics.html'">
+        <h3>Physics</h3><p>Class 10 Physics Notes</p>
+      </div>
+      <div class="card" onclick="window.location.href='chemistry.html'">
+        <h3>Chemistry</h3><p>Class 10 Chemistry Notes</p>
+      </div>
+      <div class="card" onclick="window.location.href='biology.html'">
+        <h3>Biology</h3><p>Class 10 Biology Notes</p>
+      </div>
+      <div class="card" onclick="window.location.href='english.html'">
+        <h3>English</h3><p>Literature + Grammar</p>
+      </div>
+      <div class="card" onclick="window.location.href='hindi.html'">
+        <h3>Hindi</h3><p>कविता + गद्यांश</p>
+      </div>
     </div>
   </div>
 
