@@ -3,41 +3,107 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 10 Study Hub</title>
+  <title>Class 10 Study Website</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; }
-    header { background: #0056b3; color: white; padding: 15px; text-align: center; }
-    nav { background: #333; padding: 10px; text-align: center; }
-    nav a { color: white; margin: 10px; text-decoration: none; }
-    nav a:hover { text-decoration: underline; }
-    .content { padding: 20px; }
-    .card { background: white; padding: 15px; margin: 10px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    footer { text-align: center; padding: 10px; background: #222; color: white; margin-top: 20px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav {
+      background: #34495e;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+      display: block;
+    }
+    nav a:hover {
+      background: #1abc9c;
+    }
+    .container {
+      padding: 20px;
+    }
+    .subject-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .mcq {
+      margin: 15px 0;
+      padding: 10px;
+      background: #ecf0f1;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>📚 Class 10 Study Hub</h1>
-    <p>Your Notes, MCQs, and Summaries in One Place</p>
+    <h1>Class 10 Study Website</h1>
+    <p>Notes, MCQs & Sample Papers</p>
   </header>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="notes.html">Notes</a>
-    <a href="mcqs.html">MCQs</a>
-    <a href="downloads.html">Downloads</a>
-    <a href="contact.html">Contact</a>
+    <a href="#home" onclick="showPage('home')">Home</a>
+    <a href="#history" onclick="showPage('history')">History</a>
+    <a href="#science" onclick="showPage('science')">Science</a>
+    <a href="#maths" onclick="showPage('maths')">Maths</a>
   </nav>
 
-  <div class="content">
-    <div class="card">
-      <h2>Welcome!</h2>
-      <p>This is your educational website. Explore notes, MCQs, and resources.</p>
+  <div class="container">
+    <!-- Home Page -->
+    <div id="home" class="page">
+      <h2>Welcome to Class 10 Study Hub</h2>
+      <p>Select a subject below to view study material:</p>
+      <div class="subject-list">
+        <div class="card" onclick="showPage('history')">
+          <h3>History</h3>
+          <p>Notes & MCQs</p>
+        </div>
+        <div class="card" onclick="showPage('science')">
+          <h3>Science</h3>
+          <p>Formulas & Questions</p>
+        </div>
+        <div class="card" onclick="showPage('maths')">
+          <h3>Maths</h3>
+          <p>Examples & Practice</p>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <footer>
-    <p>© 2025 Class 10 Study Hub | Made for Students</p>
-  </footer>
-</body>
-</html>
+    <!-- History Page -->
+    <div id="history" class="page" style="display:none">
+      <h2>History - Nationalism in India</h2>
+      <h3>Quick Notes:</h3>
+      <ul>
+        <li>Gandhi launched the Non-Cooperation Movement in 1920.</li>
+        <li>The Salt March began in 1930 from Sabarmati to Dandi.</li>
+        <li>Simon Commission (1927) faced boycott as no Indian member was included.</li>
+      </ul>
+
+      <h3>MCQs:</h3>
+      <div class="mcq">Q1: Who led the Salt March in 1930?<br>👉 Mahatma Gandhi</div>
