@@ -10,57 +10,56 @@
 
     body { 
       font-family: "Segoe UI", sans-serif; 
-      background: linear-gradient(135deg, #667eea, #764ba2); 
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #6a11cb, #2575fc); 
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
       min-height: 100vh;
       color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* Header */
     header { 
       text-align: center; 
       padding: 50px 20px 30px; 
-      background: rgba(0,0,0,0.4); 
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.5); 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+      border-bottom: 4px solid #ff4b2b;
     }
 
     header h1 { 
-      font-size: 2.5rem; 
+      font-size: 2.6rem; 
       font-weight: bold; 
-      margin-bottom: 10px; 
+      margin-bottom: 15px; 
       animation: glow 2s infinite alternate; 
     }
 
     header p { 
-      font-size: 1.1rem; 
-      opacity: 0.9; 
+      font-size: 1.2rem; 
+      font-weight: 500; 
+      opacity: 0.95; 
     }
 
     @keyframes glow {
-      from { text-shadow: 0 0 10px #fff, 0 0 20px #00f2fe, 0 0 30px #4facfe; }
-      to { text-shadow: 0 0 20px #fff, 0 0 30px #00f2fe, 0 0 40px #4facfe; }
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #ff4b2b, 0 0 30px #ff416c; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #2575fc, 0 0 40px #6a11cb; }
     }
 
-    /* Navigation */
-    nav { 
-      background: rgba(0,0,0,0.6); 
-      display: flex; 
-      justify-content: center; 
-      flex-wrap: wrap; 
-      padding: 10px 0; 
-    }
-
-    nav a { 
-      color: white; 
-      padding: 12px 18px; 
-      text-decoration: none; 
-      font-weight: bold; 
-      transition: 0.3s; 
-      border-radius: 6px;
-    }
-
-    nav a:hover { 
-      background: #1abc9c; 
-      color: #fff; 
+    /* Banner */
+    .banner {
+      background: linear-gradient(135deg, #ff512f, #dd2476);
+      padding: 15px;
+      text-align: center;
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     /* Container */
@@ -70,7 +69,7 @@
     }
 
     .container h2 { 
-      font-size: 1.8rem; 
+      font-size: 1.9rem; 
       margin-bottom: 10px; 
       color: #fff; 
     }
@@ -78,7 +77,7 @@
     .container p { 
       font-size: 1rem; 
       margin-bottom: 25px; 
-      opacity: 0.9; 
+      opacity: 0.95; 
     }
 
     /* Subject Cards */
@@ -127,18 +126,10 @@
     <p>Detailed Notes • MCQs • Sample Papers</p>
   </header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="history.html">History</a>
-    <a href="geography.html">Geography</a>
-    <a href="economics.html">Economics</a>
-    <a href="civics.html">Civics</a>
-    <a href="physics.html">Physics</a>
-    <a href="chemistry.html">Chemistry</a>
-    <a href="biology.html">Biology</a>
-    <a href="english.html">English</a>
-    <a href="hindi.html">Hindi</a>
-  </nav>
+  <!-- Banner -->
+  <div class="banner">
+    🎓 Class 10 Study Website – Created by a Student, <b>Keshav Kunal</b> from Bhagwatpur
+  </div>
 
   <!-- Main Content -->
   <div class="container">
@@ -178,7 +169,7 @@
 
   <!-- Footer -->
   <footer>
-    © 2025 Class 10 Study Hub | Designed by Keshav
+    © 2025 Class 10 Study Hub | Designed by Keshav Kunal ✨
   </footer>
 
 </body>
