@@ -3,43 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Class 10 Study Website</title>
+  <title>Class 10 Study Hub</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f4f6f9; }
-    header { background: #2c3e50; color: white; padding: 15px; text-align: center; }
-    nav { background: #34495e; display: flex; justify-content: center; flex-wrap: wrap; }
-    nav a { color: white; padding: 14px 20px; text-decoration: none; }
-    nav a:hover { background: #1abc9c; }
-    .container { padding: 20px; }
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body { 
+      font-family: "Segoe UI", sans-serif; 
+      background: linear-gradient(135deg, #667eea, #764ba2); 
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    /* Header */
+    header { 
+      text-align: center; 
+      padding: 50px 20px 30px; 
+      background: rgba(0,0,0,0.4); 
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    header h1 { 
+      font-size: 2.5rem; 
+      font-weight: bold; 
+      margin-bottom: 10px; 
+      animation: glow 2s infinite alternate; 
+    }
+
+    header p { 
+      font-size: 1.1rem; 
+      opacity: 0.9; 
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #fff, 0 0 20px #00f2fe, 0 0 30px #4facfe; }
+      to { text-shadow: 0 0 20px #fff, 0 0 30px #00f2fe, 0 0 40px #4facfe; }
+    }
+
+    /* Navigation */
+    nav { 
+      background: rgba(0,0,0,0.6); 
+      display: flex; 
+      justify-content: center; 
+      flex-wrap: wrap; 
+      padding: 10px 0; 
+    }
+
+    nav a { 
+      color: white; 
+      padding: 12px 18px; 
+      text-decoration: none; 
+      font-weight: bold; 
+      transition: 0.3s; 
+      border-radius: 6px;
+    }
+
+    nav a:hover { 
+      background: #1abc9c; 
+      color: #fff; 
+    }
+
+    /* Container */
+    .container { 
+      padding: 30px 20px; 
+      text-align: center; 
+    }
+
+    .container h2 { 
+      font-size: 1.8rem; 
+      margin-bottom: 10px; 
+      color: #fff; 
+    }
+
+    .container p { 
+      font-size: 1rem; 
+      margin-bottom: 25px; 
+      opacity: 0.9; 
+    }
+
+    /* Subject Cards */
     .subject-list { 
       display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-      gap: 15px; 
-      margin-top: 20px; 
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+      gap: 20px; 
     }
+
     .card { 
-      background: white; 
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
-      text-align: center; 
+      background: rgba(255,255,255,0.15); 
+      padding: 25px; 
+      border-radius: 15px; 
       cursor: pointer; 
-      transition: 0.3s;
+      transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+      color: white; 
+      font-weight: bold; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
+
     .card:hover { 
-      transform: translateY(-5px); 
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2); 
+      transform: translateY(-8px) scale(1.05); 
+      background: rgba(255, 255, 255, 0.3); 
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    .card h3 { margin-bottom: 8px; font-size: 1.3rem; }
+    .card p { margin: 0; font-size: 0.95rem; opacity: 0.9; }
+
+    /* Footer */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 15px;
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9rem;
+      color: #ddd;
     }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
   <header>
-    <h1>Class 10 Study Hub (2025–26 Batch)</h1>
+    <h1>📘 Class 10 Study Hub (2025–26 Batch)</h1>
     <p>Detailed Notes • MCQs • Sample Papers</p>
   </header>
 
-  <!-- Top Navigation -->
+  <!-- Navigation -->
   <nav>
     <a href="history.html">History</a>
     <a href="geography.html">Geography</a>
@@ -52,40 +140,46 @@
     <a href="hindi.html">Hindi</a>
   </nav>
 
+  <!-- Main Content -->
   <div class="container">
-    <h2>Welcome to Class 10 Study Website</h2>
+    <h2>🚀 Welcome to Class 10 Study Website</h2>
     <p>Select your subject below to view detailed notes:</p>
 
     <div class="subject-list">
       <div class="card" onclick="window.location.href='history.html'">
-        <h3>History</h3><p>All Chapters</p>
+        <h3>📖 History</h3><p>All Chapters</p>
       </div>
       <div class="card" onclick="window.location.href='geography.html'">
-        <h3>Geography</h3><p>All Chapters</p>
+        <h3>🌍 Geography</h3><p>All Chapters</p>
       </div>
       <div class="card" onclick="window.location.href='economics.html'">
-        <h3>Economics</h3><p>All Chapters</p>
+        <h3>💰 Economics</h3><p>All Chapters</p>
       </div>
       <div class="card" onclick="window.location.href='civics.html'">
-        <h3>Civics</h3><p>All Chapters</p>
+        <h3>🏛 Civics</h3><p>All Chapters</p>
       </div>
       <div class="card" onclick="window.location.href='physics.html'">
-        <h3>Physics</h3><p>Class 10 Physics Notes</p>
+        <h3>⚡ Physics</h3><p>Class 10 Physics Notes</p>
       </div>
       <div class="card" onclick="window.location.href='chemistry.html'">
-        <h3>Chemistry</h3><p>Class 10 Chemistry Notes</p>
+        <h3>🧪 Chemistry</h3><p>Class 10 Chemistry Notes</p>
       </div>
       <div class="card" onclick="window.location.href='biology.html'">
-        <h3>Biology</h3><p>Class 10 Biology Notes</p>
+        <h3>🧬 Biology</h3><p>Class 10 Biology Notes</p>
       </div>
       <div class="card" onclick="window.location.href='english.html'">
-        <h3>English</h3><p>Literature + Grammar</p>
+        <h3>📝 English</h3><p>Literature + Grammar</p>
       </div>
       <div class="card" onclick="window.location.href='hindi.html'">
-        <h3>Hindi</h3><p>कविता + गद्यांश</p>
+        <h3>📚 Hindi</h3><p>कविता + गद्यांश</p>
       </div>
     </div>
   </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Class 10 Study Hub | Designed by Keshav
+  </footer>
 
 </body>
 </html>
